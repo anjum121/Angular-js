@@ -1,0 +1,120 @@
+
+
+<!--<ul>-->
+  <!--{{maps}}-->
+  <!--<li ng-repeat="country in countries">-->
+    <!--{{country.name}}-->
+  <!--</li>-->
+<!--</ul>-->
+
+
+
+
+
+
+
+//var foo = {
+//
+//
+//
+//  set : function(key, val){
+//    this._key = key;
+//    this._val = val;
+//    this.myArray = [];
+//
+//      this.myArray.push(this._key, this._val)
+//
+//
+//  },
+//  get : function(){
+//    return this._val;
+//  },
+//  multiple: function(){
+//      return this.myArray[1];
+//  }
+//
+//}
+//
+//  var foo1  = Object.create(foo);
+//  var foo2 = Object.create(foo);
+//
+//  foo1.set("anjum","nawab");
+//  foo1.get();
+//  console.log(foo1.get());
+//
+//  foo2.set("key2","value2");
+//  foo2.get()
+//  foo2.multiple()
+//  console.log(foo2.get());
+//  console.log(foo2.multiple());
+
+
+<script>
+  var arrBox = [
+    {name : 'icon', type: 'jpeg'  , path: '../'},
+    {name : 'badge', type: 'gif'  , path: '../'},
+    {name : 'pattern', type: 'jpeg'  , path: '../'},
+    {name : 'boy', type: 'png'  , path: '../'},
+    {name : 'logo', type: 'gif'  , path: '../'},
+    {name : 'bg', type: 'jpeg'  , path: '../'},
+    {name : 'something' , type: 'gif'  , path: '../'},
+    {name : 'button'    , type: 'png'  , path: '../'}
+  ];
+
+
+
+  var getType = function(ArrType){
+
+    var newArr = {};
+
+
+    for(var i=0; i<arrBox.length; i++){
+
+      if( arrBox[i].type==ArrType){
+        console.log(arrBox[i].path);
+        var newImg = arrBox[i].path  + arrBox[i].name+"."+ arrBox[i].type;
+        newArr.push(newImg)
+      }
+
+
+    }
+
+    return newArr;
+
+  }
+
+  console.log(getType())
+
+
+
+
+
+</script>
+
+
+
+<!--var typeA =[];-->
+
+<!--var  me = arrBox.sort(function (a, b) {-->
+
+  <!--if(a.type =="jpeg"){-->
+   <!--console.log( a.type)-->
+    <!--typeA.push('key', a.type)-->
+  <!--}-->
+
+  <!--if (a.type > b.type) {-->
+    <!--return 1;-->
+
+  <!--}-->
+  <!--if (a.type < b.type) {-->
+    <!--return -1;-->
+  <!--}-->
+  <!--// a must be equal to b-->
+  <!--return 0;-->
+<!--});-->
+
+ <!--console.dir(me)-->
+<!--console.log( typeA)-->
+
+
+

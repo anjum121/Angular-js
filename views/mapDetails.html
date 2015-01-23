@@ -1,0 +1,21 @@
+
+<div class="panel panel-info">
+  <div class="panel-heading">You are looking at {{vm.name}} which is in {{vm.data.region}}
+    <a class=" rightLink pull-right" ui-sref="map" href=""><i class="glyphicon glyphicon-chevron-left"></i>Back</a>
+    </div>
+  <div class="panel-body">
+
+
+
+    <ul class="nav  nav-tabs">
+      <li role="presentation" ui-sref-active="active"><a ui-sref=".overview"><span class="glyphicon glyphicon-screenshot"></span> Overview</a></li>
+      <li role="presentation" ui-sref-active="active"><a ui-sref=".detailInfo"><span class="glyphicon glyphicon-info-sign"></span> Details</a></li>
+      <li role="presentation" ui-sref-active="active"><a ui-sref=".map"><span class="glyphicon glyphicon-map-marker"></span> View Map</a></li>
+    </ul>
+
+
+    <div ui-view></div>
+
+
+  </div>
+</div>

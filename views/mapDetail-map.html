@@ -1,0 +1,20 @@
+<h4>Location Map for : {{vm.name}}</h4>
+
+
+<button class="btn btn-default btn-sm" ng-click="vm.mapToggle()">{{ vm.showMap ? 'Hide' : 'Show'}} Google Map</button>
+<button class="btn  btn-default btn-sm" ng-click="vm.mosamToggle()" ng-if="vm.showMap"><span class="glyphicon glyphicon-cloud"></span> {{ vm.showMosam ? 'Hide' : 'Show'}} Weather on map</button>
+
+<div ng-if="vm.showMap">
+
+  <hr/>
+
+  <div id="map_canvas" >
+    <ui-gmap-google-map center="vm.map.center" zoom="vm.map.zoom" draggable="true" options="options">
+      <ui-gmap-layer namespace="weather" type="WeatherLayer" show="vm.showMosam"></ui-gmap-layer>
+    </ui-gmap-google-map>
+  </div>
+
+  <!--{{vm.map.center.latitude}}-->
+
+
+</div>
